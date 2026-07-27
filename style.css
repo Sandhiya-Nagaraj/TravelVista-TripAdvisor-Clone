@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    width: 100%;
+}
+
+.tripadvisor-logo {
+    width: 140px;
+}
+
+.navbar__s1 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar__s1__img,
+.navbar__s1__profile_img {
+    width: 20px;
+    cursor: pointer;
+}
+
+.navbar__s1__img__bg {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 0 10px 2px #00EB5B;
+}
+
+.play-with-ai__button_max {
+    display: none;
+    align-items: center;
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #000;
+    border: solid #00EB5B 1px;
+    border-radius: 50px;
+    padding: 8px 18px;
+}
+
+.play-with-ai__button_max:hover {
+    box-shadow: 0 0 15px 5px #00EB5B;
+}
+
+.navbar__s1__signin__btn {
+    display: none;
+    background-color: #002213;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.navbar__s1__signin__btn:hover {
+    box-shadow: 0 0 15px 5px #171717;
+}
+
+.heading_where {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0;
+    font-size: 24px;
+}
+
+/* categories */
+.categories {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    overflow-x: auto;
+    width: 100%;
+    padding: 0 16px 8px 16px;
+    white-space: nowrap;
+}
+
+.categories::-webkit-scrollbar {
+    display: none;
+}
+
+.categories__section {
+    display: flex;
+    align-items: center;
+    padding: 8px 4px;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.categories__section.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00EB5B;
+}
+
+.categories__section__img {
+    width: 22px;
+    height: 22px;
+}
+
+.categories__title {
+    font-size: 14px;
+    margin-left: 6px;
+}
+
+/* Search section */
+.search-section {
+    background-color: white;
+    border: solid 1px #e0e0e0;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 8px;
+    width: calc(100% - 32px);
+    margin: 16px auto;
+    padding: 12px;
+    flex-direction: column;
+    display: flex;
+}
+
+.search__input_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+.search-button {
+    background-color: #00eb5b;
+    color: #000;
+    border: none;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+}
+
+/* Main Card */
+.main-card {
+    background-color: #00eb6c;
+    border-radius: 16px;
+    width: calc(100% - 32px);
+    margin: 20px auto;
+    padding: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.main-card__img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.main-card__bottom {
+    text-align: center;
+    padding: 10px 0;
+    color: #000000;
+}
+
+.main-card__bottom h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.main-card__bottom p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.main-card__bottom__button {
+    background-color: #002213;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* Sections */
+.interesting-things,
+.explore-section {
+    padding: 0 16px;
+    margin: 24px 0;
+}
+
+.interesting-things h1,
+.explore-section h1 {
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.interesting-things p,
+.explore-section p {
+    font-size: 13px;
+    color: #545454;
+    margin-bottom: 12px;
+}
+
+.interesting-things__wrapper {
+    position: relative;
+}
+
+.interesting-things__section,
+.explore-section__wrapper__container {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 12px;
+}
+
+.interesting-things__section::-webkit-scrollbar,
+.explore-section__wrapper__container::-webkit-scrollbar {
+    display: none;
+}
+
+.interesting-things__card {
+    position: relative;
+    flex: 0 0 220px;
+    height: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.interesting-things__card__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.interesting-things__card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    pointer-events: none;
+}
+
+.interesting-things__card h3 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    z-index: 2;
+}
+
+.explore-section__wrapper__card {
+    flex: 0 0 220px;
+    position: relative;
+    cursor: pointer;
+}
+
+.explore-section__wishlist {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: black;
+    background-color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.explore-section__wrapper__card img {
+    object-fit: cover;
+    height: 160px;
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+.explore-section__wrapper__card__h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: black;
+    margin: 6px 0 2px 0;
+}
+
+.explore-section__wrapper__card p {
+    font-size: 12px;
+    color: #545454;
+    margin: 2px 0;
+}
+
+.explore-section__wrapper__card__price {
+    color: black;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.scroll-arrow-btn {
+    display: none;
+}
+
+/* Foundation & Award */
+.foundation-section,
+.award-section {
+    width: calc(100% - 32px);
+    margin: 24px auto;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.foundation-section {
+    background-color: #F7F7F7;
+}
+
+.foundation-section__img {
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.foundation-section__top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.tripadvisor-logo-image {
+    width: 24px;
+    height: auto;
+}
+
+.foundation-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.foundation-section p {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    color: #545454;
+}
+
+.donate-btn {
+    background-color: #002213;
+    color: white;
+    font-size: 0.8rem;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.sponsored_link{
+    color: #000;
+}
+.award-section {
+    background-color: #0f100c;
+}
+
+.award-section_badge {
+    width: 40px;
+    margin-bottom: 8px;
+}
+
+.award-section h1 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.award-section p {
+    color: #ffffff;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+}
+
+.award-section__btn {
+    background-color: #f3be6d;
+    color: #000;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.award-section__image {
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Footer */
+.footer-section {
+    background-color: #F7F7F7;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-section h4 {
+    font-size: 0.85rem;
+    margin: 8px 0;
+}
+.footer-section h4:hover{
+    text-decoration: underline;
+    color: black;
+    font-weight: bold;
+}
+.footer-section p {
+    font-size: 0.75rem;
+    color: #333;
+    margin-bottom: 4px;
+}
+.footer-section p:hover{
+    text-decoration: underline;
+    color: black;
+    font-weight: bold;
+
+}
+.footer-divider {
+    border: none;
+    border-top: 1px solid #E0E0E0;
+    margin: 12px 0;
+}
+
+.footer-section select {
+    border: solid 1px #656565;
+    background-color: #fff;
+    padding: 8px 12px;
+    margin: 6px 0;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.footer-section__icons {
+    display: flex;
+    gap: 16px;
+    margin: 12px 0;
+    font-size: 1.1rem;
+}
+
+.footer-section__copyright {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+/* Desktop Media Query */
+@media screen and (min-width: 768px) {
+    .tripadvisor-logo {
+        width: 160px;
+    }
+
+    .navbar__s1__img__bg,
+    .navbar__s1__profile_img {
+        display: none;
+    }
+
+    .play-with-ai__button_max,
+    .navbar__s1__signin__btn {
+        display: flex;
+    }
+
+    .categories {
+        justify-content: center;
+    }
+
+    .search-section {
+        max-width: 900px;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 30px;
+        padding: 6px 6px 6px 16px;
+    }
+
+    .search__input_wrapper {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .search-button {
+        width: auto;
+        margin-top: 0;
+        padding: 10px 24px;
+    }
+
+    .main-card {
+        max-width: 1000px;
+        flex-direction: row;
+        align-items: center;
+        padding: 24px;
+    }
+
+    .main-card > div:first-child {
+        flex: 1;
+    }
+
+    .main-card__img {
+        max-height: 320px;
+    }
+
+    .main-card__bottom {
+        flex: 1;
+        border-left: 1px solid #000;
+        padding-left: 24px;
+        margin-left: 24px;
+    }
+
+    .foundation-section,
+    .award-section {
+        max-width: 1000px;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .foundation-section__img,
+    .award-section__image {
+        width: 50%;
+        height: 100%;
+        min-height: 300px;
+        border-radius: 0;
+    }
+
+    .foundation-section__content,
+    .award-section__content {
+        width: 50%;
+        padding: 32px;
+    }
+
+    .footer-section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 24px;
+    }
+
+    .footer-divider {
+        display: none;
+    }
+}
